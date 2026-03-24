@@ -51,8 +51,8 @@ export const App = () => {
       <div className="sort-bar">
         <span className="sort-label">Ordenar por:</span>
         <button className={`sort-btn ${orden === "none" ? "active" : ""}`} onClick={() => setOrden("none")}>Sin orden</button>
-        <button className={`sort-btn ${orden === "precio-asc" ? "active" : ""}`} onClick={() => setOrden("precio-asc")}>Precio ↑</button>
-        <button className={`sort-btn ${orden === "precio-desc" ? "active" : ""}`} onClick={() => setOrden("precio-desc")}>Precio ↓</button>
+        <button className={`sort-btn ${orden === "precio-asc" ? "active" : ""}`} onClick={() => setOrden("precio-asc")}>Precio menor</button>
+        <button className={`sort-btn ${orden === "precio-desc" ? "active" : ""}`} onClick={() => setOrden("precio-desc")}>Precio mayor</button>
         <button className={`sort-btn ${orden === "rating-desc" ? "active" : ""}`} onClick={() => setOrden("rating-desc")}>⭐ Mejor rating</button>
       </div>
       <CategoryFilter categoria={categoria} setCategoria={setCategoria} />

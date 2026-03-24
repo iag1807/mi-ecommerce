@@ -3,22 +3,22 @@
 }
 .categorias button {
   margin-right: 10px;
-  margin-left: 35px;
+  margin-left: 30px;
   padding: 10px 14px;
-  border: none;
-  background-color: palevioletred;
-  color: white;
+  border: 1px solid palevioletred;
+  background-color: transparent;
+  color: palevioletred;
   border-radius: 8px;
   cursor: pointer;
   transition: 0.2s;
 }
 .categorias button:hover {
-  background-color: rgba(245, 130, 163, 0.99);
+  background: palevioletred;
+  color: white;
 }
 .categorias button.active {
-  background-color: #b5375a;
-  font-weight: 700;
-  box-shadow: 0 0 0 3px rgba(176, 55, 90, 0.3);
+  background: palevioletred;
+  color: white;
 }
 .titulo {
   text-align: center;
