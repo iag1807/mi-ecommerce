@@ -1,0 +1,25 @@
+.categorias {
+  margin-bottom: 50px;
+}
+.categorias button {
+  margin-right: 10px;
+  margin-left: 35px;
+  padding: 10px 14px;
+  border: none;
+  background-color: palevioletred;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.categorias button:hover {
+  background-color: rgba(245, 130, 163, 0.99);
+}
+.titulo {
+  text-align: center;
+  color: palevioletred;
+  font-weight: 600;
+  font-size: 28px;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
