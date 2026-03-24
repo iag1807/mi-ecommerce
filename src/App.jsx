@@ -11,6 +11,7 @@ export const App = () => {
   const [categoria, setCategoria] = useState("all")
   const [soloDescuento, setSoloDescuento] = useState(false)
   const [buscar, setBuscar] = useState("")
+  const [orden, setOrden] = useState("none")
 
   useEffect(() => {
     fetch("https://dummyjson.com/products?limit=100")
@@ -32,6 +33,12 @@ export const App = () => {
     .filter(p => categoria === "all" || p.category === categoria)
     .filter(p => !soloDescuento || p.discountPercentage > 10)
     .filter(p => p.title.toLowerCase().includes(buscar.toLowerCase()))
+    .sort((a, b) => {
+      if (orden === "precio-asc") return a.price - b.price
+      if (orden === "precio-desc") return b.price - a.price
+      if (orden === "rating-desc") return b.rating - a.rating
+      return 0
+    })
 
   return (
     <div className="container">
@@ -41,6 +48,13 @@ export const App = () => {
         <input type="checkbox" onChange={(e) => setSoloDescuento(e.target.checked)} />
         Solo con descuento mayor al 10%
       </label>
+      <div className="sort-bar">
+        <span className="sort-label">Ordenar por:</span>
+        <button className={`sort-btn ${orden === "none" ? "active" : ""}`} onClick={() => setOrden("none")}>Sin orden</button>
+        <button className={`sort-btn ${orden === "precio-asc" ? "active" : ""}`} onClick={() => setOrden("precio-asc")}>Precio ↑</button>
+        <button className={`sort-btn ${orden === "precio-desc" ? "active" : ""}`} onClick={() => setOrden("precio-desc")}>Precio ↓</button>
+        <button className={`sort-btn ${orden === "rating-desc" ? "active" : ""}`} onClick={() => setOrden("rating-desc")}>⭐ Mejor rating</button>
+      </div>
       <CategoryFilter setCategoria={setCategoria} />
       <div className="grid">
         {productosFiltrados.map(p => (

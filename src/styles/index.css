@@ -29,3 +29,34 @@ body {
   grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
   gap: 20px;
 }
+.sort-bar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+  flex-wrap: wrap;
+}
+.sort-label {
+  color: palevioletred;
+  font-weight: 600;
+}
+.sort-btn {
+  padding: 6px 14px;
+  border: 2px solid palevioletred;
+  border-radius: 20px;
+  background: transparent;
+  color: palevioletred;
+  font-family: inherit;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+.sort-btn:hover {
+  background: palevioletred;
+  color: white;
+}
+.sort-btn.active {
+  background: palevioletred;
+  color: white;
+  font-weight: 600;
+}
