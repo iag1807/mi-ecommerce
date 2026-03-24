@@ -1,18 +1,125 @@
-# React + Vite
+# 🛒 Mini Ecommerce en React
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 📌 Descripción del proyecto
 
-Currently, two official plugins are available:
+Este proyecto consiste en un mini ecommerce desarrollado con React, el cual consume una API externa para mostrar productos de manera dinámica.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+La aplicación permite visualizar una lista de productos y aplicar diferentes filtros para mejorar la experiencia del usuario. Se implementaron funcionalidades como búsqueda en tiempo real, filtrado por categorías, filtrado por productos con descuento mayor a 10%, orden de precio menor a mayor / mayor a menor / mejor rating.
 
-## React Compiler
+Los datos de los productos se obtienen desde la API pública de DummyJSON.
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+---
 
-Note: This will impact Vite dev & build performances.
+## ⚙️ Tecnologías utilizadas
 
-## Expanding the ESLint configuration
+* React
+* JavaScript
+* CSS
+* API (DummyJSON)
+* Vite
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🚀 Cómo ejecutar el proyecto localmente
+
+1. Clonar el repositorio:
+
+```bash
+git clone https://github.com/iag1807/mi-ecommerce.git
+```
+
+2. Ingresar a la carpeta del proyecto:
+
+```bash
+cd mi-ecommerce
+```
+
+3. Instalar las dependencias:
+
+```bash
+npm install
+```
+
+4. Ejecutar el servidor de desarrollo:
+
+```bash
+npm run dev
+```
+
+5. Abrir en el navegador:
+
+```
+http://localhost:5173
+```
+
+---
+
+## 🔍 Funcionalidades principales
+
+* 🔎 Búsqueda de productos en tiempo real
+* 💸 Filtro de productos con descuento mayor al 10%
+* 🗂️ Ordenar por: precio menor, precio mayor y mejor rating
+* 🗂️ Filtro por categorías
+* 🖼️ Visualización de imagen, nombre y precio de los productos
+* ⭐ Visualización de calificación (rating)
+
+---
+
+## 🧩 Estructura del proyecto
+
+```
+src/
+│
+├── components/
+│   ├── ProductCard.jsx
+│   ├── SearchBar.jsx
+│   └── CategoryFilter.jsx
+│
+├── styles/
+│   ├── ProductCard.css
+│   ├── SearchBar.css
+│   └── CategoryFilter.css
+|   └── index.css
+│
+└── App.jsx
+└── main.jsx
+└── README.md
+
+```
+
+## 📸 Capturas de pantalla
+
+### 🖥️ Vista principal
+
+![Vista principal](public/vista-principal.png)
+
+### 🔎 Búsqueda de productos
+
+![Búsqueda](public/busqueda.png)
+
+### 🗂️ Filtro por categorías
+    
+![Filtro](public/categorias.png)
+
+### 💸 Filtro por descuento
+
+![Filtro](public/descuento.png)
+
+---
+
+## 👩‍💻 Autor
+
+Proyecto realizado por **Isabella Acevedo Gomez**
+
+---
+
+## 📌 Notas adicionales
+
+Este proyecto fue desarrollado como parte de un taller práctico de React, aplicando conceptos como:
+
+* Componentes funcionales
+* Props
+* Hooks (useState, useEffect)
+* Consumo de APIs
+* Renderizado dinámico
+* Manejo de eventos
