@@ -97,13 +97,17 @@ src/
 
 ![Búsqueda](public/busqueda.png)
 
-### 🗂️ Filtro por categorías
-    
-![Filtro](public/categorias.png)
+### 🗂️ Ordenar por
+
+![Filtro](public/ordenar-por.png)
 
 ### 💸 Filtro por descuento
 
 ![Filtro](public/descuento.png)
+
+### 🗂️ Filtro por categorías
+    
+![Filtro](public/categorias.png)
 
 ---
 
