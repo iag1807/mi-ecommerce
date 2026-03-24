@@ -1,7 +1,12 @@
-export const SearchBar = () => {
+import "../styles/SearchBar.css"
+
+export const SearchBar = ({ setBuscar }) => {
   return (
-    <div>
-        <h1>Buscar productos</h1>
-    </div>
+    <input
+      type="text"
+      placeholder="Buscar productos..."
+      className="search"
+      onChange={(e) => setBuscar(e.target.value)}
+    />
   )
 }
