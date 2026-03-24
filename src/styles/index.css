@@ -19,6 +19,11 @@ body {
   font-size: 28px;
   text-transform: uppercase;
 }
+.checkbox {
+  margin-bottom: 15px;
+  color: palevioletred;
+  font-weight: 600;
+}
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
