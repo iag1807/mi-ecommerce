@@ -55,7 +55,7 @@ export const App = () => {
         <button className={`sort-btn ${orden === "precio-desc" ? "active" : ""}`} onClick={() => setOrden("precio-desc")}>Precio ↓</button>
         <button className={`sort-btn ${orden === "rating-desc" ? "active" : ""}`} onClick={() => setOrden("rating-desc")}>⭐ Mejor rating</button>
       </div>
-      <CategoryFilter setCategoria={setCategoria} />
+      <CategoryFilter categoria={categoria} setCategoria={setCategoria} />
       <div className="grid">
         {productosFiltrados.map(p => (
           <ProductCard key={p.id} producto={p} />

@@ -15,6 +15,11 @@
 .categorias button:hover {
   background-color: rgba(245, 130, 163, 0.99);
 }
+.categorias button.active {
+  background-color: #b5375a;
+  font-weight: 700;
+  box-shadow: 0 0 0 3px rgba(176, 55, 90, 0.3);
+}
 .titulo {
   text-align: center;
   color: palevioletred;
