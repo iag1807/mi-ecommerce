@@ -1,9 +1,35 @@
-import React from 'react'
+import { useState, useEffect } from "react"
 
 export const App = () => {
+
+  const [productos, setProductos] = useState([])
+  const [cargando, setCargando] = useState(true)
+  const [error, setError] = useState(null)
+
+  useEffect(() => {
+    fetch("https://dummyjson.com/products?limit=100")
+      .then(res => res.json())
+      .then(data => {
+        setProductos(data.products)
+        setCargando(false)
+      })
+      .catch(() => {
+        setError("Error al cargar productos")
+        setCargando(false)
+      })
+  }, [])
+
+  if (cargando) return <p>Cargando...</p>
+  if (error) return <p>{error}</p>
+
   return (
-    <div className='container'>
-        <h1 className='titulo'>Mini ecommerce</h1>
+    <div className="container">
+      <h1 className="titulo">Mini Ecommerce</h1>
+      <ul>
+        {productos.map(p => (
+          <li key={p.id}>{p.title}</li>
+        ))}
+      </ul>
     </div>
   )
 }
