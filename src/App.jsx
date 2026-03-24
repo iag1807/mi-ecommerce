@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react"
+import { ProductCard } from "./components/ProductCard.jsx"
 
 export const App = () => {
 
@@ -25,11 +26,11 @@ export const App = () => {
   return (
     <div className="container">
       <h1 className="titulo">Mini Ecommerce</h1>
-      <ul>
+      <div className="grid">
         {productos.map(p => (
-          <li key={p.id}>{p.title}</li>
+          <ProductCard key={p.id} producto={p} />
         ))}
-      </ul>
+      </div>
     </div>
   )
 }
